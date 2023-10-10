@@ -11,8 +11,8 @@ public class CalcDeMedias {
      * @return somaNotas
      */
     public int notasAlunos (){
-        int notaMatematica = 10;
-        int notaPortugues = 8;
+        int notaMatematica = 2;
+        int notaPortugues = 2;
         int notaIngles = 5;
         int notaCiencias = 7;
 
@@ -47,14 +47,16 @@ public class CalcDeMedias {
         //validação de aprovação do aluno com base na nota minina
         int notaMinima = 7;
         String resultado;
-        if (media < notaMinima){
-            resultado = "Reprovado";
-        }else {
-            resultado = "Aprovado";
+        if (media >= notaMinima){
+            resultado = "aprovado";
+        }else if (media >= 5) {
+            resultado = "de recuperação";
+        } else {
+            resultado = "reprovado";
         }
 
         //imprime tudo no console
-        System.out.println("A média final é: "+ media);
+        System.out.println("A média final do aluno(a) é: "+ media);
         System.out.println("O aluno(a) está " + resultado);
     }
 }
